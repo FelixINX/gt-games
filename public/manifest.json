@@ -1,0 +1,19 @@
+{
+  "name": "GT Games",
+  "icons": [
+    {
+      "src": "/img/icon192.png",
+      "type":"image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/icon.png",
+      "type":"image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "background_color": "#002858",
+  "display": "standalone",
+  "theme_color": "#002858"
+}

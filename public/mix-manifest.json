@@ -1,0 +1,12 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/home.js": "/home.js",
+    "/leaderboard.js": "/leaderboard.js",
+    "/profile.js": "/profile.js",
+    "/redirect.js": "/redirect.js",
+    "/scatt.js": "/scatt.js",
+    "/scatt-all.js": "/scatt-all.js",
+    "/scatt-categories.js": "/scatt-categories.js",
+    "/scatt-create.js": "/scatt-create.js"
+}
