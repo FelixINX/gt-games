@@ -5,7 +5,7 @@
                 <v-list-item>
                     <v-list-item-content>
                         <v-list-item-title class="title">GT Games</v-list-item-title>
-                        <v-list-item-subtitle>Version 1.0.0-beta.1+001</v-list-item-subtitle>
+                        <v-list-item-subtitle>Version 1.0.0-beta.2</v-list-item-subtitle>
                     </v-list-item-content>
                 </v-list-item>
 

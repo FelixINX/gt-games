@@ -10,7 +10,7 @@
                     <v-list-item-content>
                         <v-list-item-title>{{ player.name }}</v-list-item-title>
                         <v-list-item-subtitle>
-                            <b>{{ player.gameReputation }} points </b> sur un total de {{ player.reputation }} points
+                            {{ player.gameReputation }} points
                         </v-list-item-subtitle>
                     </v-list-item-content>
                     <v-list-item-action v-if="rank[0] === player">

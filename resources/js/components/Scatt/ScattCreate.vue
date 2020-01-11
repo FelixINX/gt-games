@@ -10,7 +10,7 @@
 
                     <v-subheader>Catégories</v-subheader>
                     <v-checkbox v-model="gameInput.categories" v-for="category in availableCategories"
-                                :label="category.title" :value="category.id"
+                                :label="category.title" :value="category.id" :hint="category.rules"
                                 :rules="selectedCategoriesRules" :key="category.id"></v-checkbox>
                 </v-form>
             </v-card-text>

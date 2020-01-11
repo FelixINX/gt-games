@@ -59,8 +59,8 @@
         .listen('.App\\Events\\Scatt\\ChangeState', e => {
           this.transitionData.user = e.responsibleUser
           this.transitionData.active = true
-          this.$store.commit('scattGame/setActiveRound', e.newRound)
           setTimeout(() => {
+            this.$store.commit('scattGame/setActiveRound', e.newRound)
             this.$store.commit('scattGame/setState', e.newState)
             this.transitionData.active = false
           }, e.transitionTime * 1000)

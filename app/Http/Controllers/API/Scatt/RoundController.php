@@ -105,8 +105,8 @@ class RoundController extends Controller
 
         // Set user approval
         $approval = [];
-        foreach ($round->game->users as $user) {
-            $approval[$user->id] = false;
+        foreach ($round->game->users as $gameUser) {
+            $approval[$gameUser->id] = false;
         }
         $round->user_approval = $approval;
 

@@ -22,7 +22,7 @@
                     </v-list-item-avatar>
                     <v-list-item-title>{{ player.name }}</v-list-item-title>
                     <v-list-item-action v-if="player.id == stateGame.userId">
-                        <span>Modérateur</span>
+                        <v-icon color="white">mdi-account-star</v-icon>
                     </v-list-item-action>
                     <v-list-item-action v-if="isMod && player.id != stateGame.userId">
                         <v-btn icon @click="apiLeaveGame(player.id)">

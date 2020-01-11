@@ -34,10 +34,12 @@ const mutations = {
     state.data.currentState = newState
   },
   setActiveRound (state, newRound) {
-    state.activeRound = newRound
-    state.data.categories.forEach(category => {
-      state.roundAnswers[category.id] = newRound.letter
-    })
+    if (state.activeRound.id !== newRound.id) {
+      state.activeRound = newRound
+      state.data.categories.forEach(category => {
+        state.roundAnswers[category.id] = newRound.letter
+      })
+    }
   },
   setRoundAnswers (state, answers) {
     state.roundAnswers = answers

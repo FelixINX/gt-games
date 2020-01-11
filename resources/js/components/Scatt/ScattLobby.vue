@@ -65,7 +65,7 @@
         <v-card color="white">
             <v-card-title>Joueurs</v-card-title>
             <v-card-text>
-                <v-chip v-for="user in stateGame.users" :key="user.id" class="mr-2"
+                <v-chip v-for="user in stateGame.users" :key="user.id" class="mr-2 mb-1"
                         :style="{ 'cyan': user.id == stateGame.userId }">
                     <v-avatar left>
                         <img :src="user.avatar" :alt="user.name">

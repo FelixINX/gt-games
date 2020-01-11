@@ -170,8 +170,8 @@ class GameController extends Controller
 
             // Setup users reputation
             $usersReputation = $game->users_reputation;
-            foreach ($game->users as $user) {
-                $usersReputation[$user->id] = 0;
+            foreach ($game->users as $gameUser) {
+                $usersReputation[$gameUser->id] = 0;
             }
             $game->users_reputation = $usersReputation;
 
