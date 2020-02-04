@@ -1,6 +1,8 @@
 {
+    "/vendors~scatt~scatt-create.js": "/vendors~scatt~scatt-create.js",
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
+    "/about.js": "/about.js",
     "/home.js": "/home.js",
     "/leaderboard.js": "/leaderboard.js",
     "/profile.js": "/profile.js",
@@ -9,5 +11,6 @@
     "/scatt-all.js": "/scatt-all.js",
     "/scatt-categories.js": "/scatt-categories.js",
     "/scatt-create.js": "/scatt-create.js",
-    "/about.js": "/about.js"
+    "/vendors~home.js": "/vendors~home.js",
+    "/vendors~scatt-create.js": "/vendors~scatt-create.js"
 }
