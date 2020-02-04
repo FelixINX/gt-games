@@ -5,7 +5,7 @@
                 <v-list-item>
                     <v-list-item-content>
                         <v-list-item-title class="title">GT Games</v-list-item-title>
-                        <v-list-item-subtitle>Version 1.0.0-beta.2</v-list-item-subtitle>
+                        <v-list-item-subtitle>Version 1.0.0-beta.3</v-list-item-subtitle>
                     </v-list-item-content>
                 </v-list-item>
 
@@ -97,6 +97,14 @@
                             <v-list-item-title>À propos</v-list-item-title>
                         </v-list-item-content>
                     </v-list-item>
+                    <v-list-item to="/about/whats-new">
+                        <v-list-item-action>
+                            <v-icon>mdi-party-popper</v-icon>
+                        </v-list-item-action>
+                        <v-list-item-content>
+                            <v-list-item-title>Nouveautés</v-list-item-title>
+                        </v-list-item-content>
+                    </v-list-item>
                     <v-list-item to="/redirect/github">
                         <v-list-item-action>
                             <v-icon>mdi-github-circle</v-icon>
@@ -124,18 +132,18 @@
                         <v-list-item to="/profile">
                             <v-list-item-title>Profil</v-list-item-title>
                         </v-list-item>
-                        <v-list-item to="/auth/logout">
+                        <v-list-item to="/redirect/logout">
                             <v-list-item-title>Se déconnecter</v-list-item-title>
                         </v-list-item>
                     </v-list>
                 </v-menu>
 
-                <v-btn icon v-else href="/login/google">
+                <v-btn icon v-else href="/redirect/login">
                     <v-icon>mdi-login-variant</v-icon>
                 </v-btn>
             </v-app-bar>
 
-            <v-content class="mt-4">
+            <v-content class="mt-4" :style="{ backgroundImage: pageBackground }">
                 <v-container>
                     <router-view></router-view>
                 </v-container>
@@ -178,7 +186,12 @@
       VContent, VContainer, ScattFooter
     },
     data: () => ({
-      drawer: false
+      drawer: false,
+      homeBackgrounds: [
+        '/img/home-1.jpg',
+        '/img/home-2.jpg'
+      ],
+      currentCssBackground: ''
     }),
     mounted() {
       if (window.userApiToken) {
@@ -200,6 +213,13 @@
       },
       stateUser() {
         return this.$store.state.user.data
+      },
+      pageBackground() {
+        if (this.$route.meta.background) {
+          return 'url("' + this.homeBackgrounds[Math.floor(Math.random() * this.homeBackgrounds.length)] + '")'
+        } else {
+          return 'url("/img/background.jpg")'
+        }
       }
     }
   }
@@ -207,7 +227,8 @@
 
 <style>
     .v-content {
-        background: url("/img/background.jpg") no-repeat;
         background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
     }
 </style>

@@ -1,11 +1,11 @@
 <template>
     <div id="scatt-footer">
         <v-footer color="secondary" dark>
-            <v-btn color="error" class="mr-4" v-if="!isMod && isInGame" @click="apiLeaveGame(stateUser.id)">
-                <v-icon left>mdi-account-minus</v-icon>
-                Quitter
-            </v-btn>
-            <v-spacer></v-spacer>
+<!--            <v-btn color="error" class="mr-4" v-if="!isMod && isInGame" @click="apiLeaveGame(stateUser.id)">-->
+<!--                <v-icon left>mdi-account-minus</v-icon>-->
+<!--                Quitter-->
+<!--            </v-btn>-->
+<!--            <v-spacer></v-spacer>-->
             <v-btn @click="playersSheet = true" color="accent">
                 <v-icon left>mdi-account-group</v-icon>
                 {{ stateGame.users && stateGame.users.length }} joueur(s)
@@ -24,11 +24,11 @@
                     <v-list-item-action v-if="player.id == stateGame.userId">
                         <v-icon color="white">mdi-account-star</v-icon>
                     </v-list-item-action>
-                    <v-list-item-action v-if="isMod && player.id != stateGame.userId">
-                        <v-btn icon @click="apiLeaveGame(player.id)">
-                            <v-icon color="error">mdi-account-minus</v-icon>
-                        </v-btn>
-                    </v-list-item-action>
+<!--                    <v-list-item-action v-if="isMod && player.id != stateGame.userId">-->
+<!--                        <v-btn icon @click="apiLeaveGame(player.id)">-->
+<!--                            <v-icon color="error">mdi-account-minus</v-icon>-->
+<!--                        </v-btn>-->
+<!--                    </v-list-item-action>-->
                 </v-list-item>
             </v-list>
         </v-bottom-sheet>

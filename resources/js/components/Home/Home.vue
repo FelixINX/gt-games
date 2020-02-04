@@ -13,6 +13,22 @@
                               fill="#FFFFFF"/>
                     </svg>
                 </v-card-title>
+                <v-card-text>
+                    <v-list v-if="resumeGames.length" color="cyan">
+                        <v-list-item :to="'/scatt-game/' + game.id" v-for="game in resumeGames"
+                                     :key="game.id">
+                            <v-list-item-avatar>
+                                <v-img :src="game.user.avatar"></v-img>
+                            </v-list-item-avatar>
+                            <v-list-item-content>
+                                <v-list-item-title>Reprendre la partie {{ game.id }} par {{ game.user.name }}</v-list-item-title>
+                            </v-list-item-content>
+                            <v-list-item-icon>
+                                <v-icon color="secondary">mdi-arrow-right</v-icon>
+                            </v-list-item-icon>
+                        </v-list-item>
+                    </v-list>
+                </v-card-text>
                 <v-card-subtitle class="m-0">Rejoindre une partie</v-card-subtitle>
                 <v-card-text>
                     <v-skeleton-loader type="list-item-avatar-two-line" v-for="i in 5" v-if="!apiDone"
@@ -57,33 +73,22 @@
                 </v-card-actions>
             </v-card>
         </div>
-        <div v-else class="on-top">
-            <v-card color="white">
-                <v-card-title>Bienvenue dans GT Games!</v-card-title>
-                <v-card-text>
-                    GT Games est un site web de jeu créé par des étudiants de l'ITHQ pour les étudiants de l'ITHQ.<br>
-                    <b>Un compte monithq.ca est requis pour se connecter.</b>
-                </v-card-text>
-                <v-card-actions>
-                    <v-btn color="accent" href="/login/google">
-                        <v-icon left>mdi-google</v-icon>
-                        Se connecter
-                    </v-btn>
-                    <svg height="100" width="100" class="game-preview game-1">
-                        <circle cx="50" cy="50" r="40" fill="#28aba9"/>
-                        <path d="M 48.065 32 L 37.468 59 L 41.81 59 L 43.97 53.218 L 56.008 53.218 L 58.19 59 L 62.533 59 L 51.935 32 M 50 37.153 L 54.568 49.348 L 45.41 49.348 M 32 63.5 L 32 56.75 L 27.5 56.75 L 27.5 68 L 72.5 68 L 72.5 63.5 L 32 63.5 Z"
-                              fill="#FFFFFF"/>
-                    </svg>
-                    <svg height="100" width="100" class="game-preview game-2">
-                        <circle cx="50" cy="50" r="40" fill="#3b0633"/>
-                        <path d="M 51.566 55.526 L 46.994 51.008 L 47.048 50.954 C 50.18 47.462 52.412 43.448 53.726 39.2 L 59 39.2 L 59 35.6 L 46.4 35.6 L 46.4 32 L 42.8 32 L 42.8 35.6 L 30.2 35.6 L 30.2 39.2 L 50.306 39.2 C 49.1 42.656 47.192 45.95 44.6 48.83 C 42.926 46.976 41.54 44.942 40.442 42.8 L 36.842 42.8 C 38.156 45.734 39.956 48.506 42.206 51.008 L 33.044 60.044 L 35.6 62.6 L 44.6 53.6 L 50.198 59.198 L 51.566 55.526 Z  M 61.7 46.4 L 58.1 46.4 L 50 68 L 53.6 68 L 55.616 62.6 L 64.166 62.6 L 66.2 68 L 69.8 68 L 61.7 46.4 Z  M 56.984 59 L 59.9 51.206 L 62.816 59 L 56.984 59 Z"
-                              fill="#FFFFFF"/>
-                    </svg>
-                </v-card-actions>
-            </v-card>
+        <div v-else>
+            <div class="landing-text">
+                <h1 class="white--text display-2">Bienvenue dans GT Games</h1><br>
+                <v-btn x-large color="white" text to="/redirect/login">Étudiants
+                    <v-icon right>mdi-chevron-right</v-icon>
+                </v-btn>
+                <br>
+                <v-btn x-large color="white" text to="/redirect/login-email">Autres
+                    <v-icon right>mdi-chevron-right</v-icon>
+                </v-btn>
+            </div>
+            <img src="/img/logo.svg" alt="Logo" class="landing-blocks align-self-center">
         </div>
+
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate"
-             viewBox="0 0 500 400" width="500pt" height="400pt" class="square-design">
+             viewBox="0 0 500 400" width="500pt" height="400pt" class="square-design" v-if="user.name">
             <rect x="300" y="200" width="100" height="100" transform="matrix(1,0,0,1,0,0)" fill="rgb(82,43,67)"/>
             <rect x="200" y="200" width="100" height="100" transform="matrix(1,0,0,1,0,0)" fill="rgb(82,43,67)"/>
             <path d="M 23.57 300 L 100 300 L 100 400 L 0 400 L 0 323.57 C 0 310.561 10.561 300 23.57 300 Z"
@@ -107,9 +112,27 @@
 </template>
 
 <script>
-  import {  VBtn, VCard, VCardActions, VCardSubtitle, VCardText, VCardTitle, VCol, VIcon, VImg, VList, VListItem,
-            VListItemAvatar, VListItemContent, VListItemIcon, VListItemSubtitle, VListItemTitle, VRow, VSkeletonLoader,
-            VSpacer } from 'vuetify/lib'
+  import {
+    VBtn,
+    VCard,
+    VCardActions,
+    VCardSubtitle,
+    VCardText,
+    VCardTitle,
+    VCol,
+    VIcon,
+    VImg,
+    VList,
+    VListItem,
+    VListItemAvatar,
+    VListItemContent,
+    VListItemIcon,
+    VListItemSubtitle,
+    VListItemTitle,
+    VRow,
+    VSkeletonLoader,
+    VSpacer
+  } from 'vuetify/lib'
 
   export default {
     name: 'Home',
@@ -120,6 +143,7 @@
     },
     data: () => ({
       availableGames: [],
+      resumeGames: [],
       apiDone: false
     }),
     computed: {
@@ -128,17 +152,23 @@
       }
     },
     methods: {
-        apiAvailableGame () {
-          this.apiDone = false
+      apiAvailableGame() {
+        this.apiDone = false
 
-          this.$axios.get('/scatt/available', {
-            params: {api_token: window.userApiToken}
+        this.$axios.get('/scatt/available', {
+          params: {api_token: window.userApiToken}
+        })
+          .then(response => {
+            this.availableGames = response.data.data
           })
-            .then(response => {
-              this.availableGames = response.data.data
-              this.apiDone = true
-            })
-        }
+        this.$axios.get('/scatt/resume', {
+          params: {api_token: window.userApiToken}
+        })
+          .then(response => {
+            this.resumeGames = response.data.data
+            this.apiDone = true
+          })
+      }
     },
     mounted() {
       if (window.userApiToken) {
@@ -154,6 +184,7 @@
         top: -32px;
         right: 0px;
     }
+
     @media only screen and (min-width: 600px) {
         .game-icon {
             right: -32px;
@@ -176,7 +207,7 @@
     .square-design {
         width: 250px;
         height: auto;
-        position: absolute;
+        position: fixed;
         right: 0;
         bottom: 0;
         z-index: 1;
@@ -185,5 +216,32 @@
     .on-top {
         position: relative;
         z-index: 2;
+    }
+
+    .landing-text {
+        position: absolute;
+        bottom: 25px;
+        left: 25px;
+    }
+
+    .v-content__wrap {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(242, 107, 80, 0.9));
+    }
+
+    .landing-text .v-btn {
+        padding-left: 4px !important;
+    }
+
+    .landing-blocks {
+        height: 150px;
+        position: absolute;
+        bottom: 25px;
+        right: 25px;
+    }
+
+    @media screen and (max-width: 992px) {
+        .landing-blocks {
+            height: 75px;
+        }
     }
 </style>

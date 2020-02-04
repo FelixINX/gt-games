@@ -29,5 +29,6 @@ Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('r
 // Admin
 Route::get('/admin', 'Admin\HomeController@index')->name('admin.home')->middleware('auth');
 Route::resource('/admin/invitations', 'Admin\InvitationController')->middleware('auth');
+Route::resource('/admin/groups', 'Admin\GroupController')->middleware('auth');
 
 Route::get('/home', 'HomeController@index')->name('home');

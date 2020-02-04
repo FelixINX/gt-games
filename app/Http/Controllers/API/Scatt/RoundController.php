@@ -103,25 +103,29 @@ class RoundController extends Controller
         // Set user
         $user = User::where('api_token', $request->input('api_token'))->firstOrFail();
 
-        // Set user approval
-        $approval = [];
-        foreach ($round->game->users as $gameUser) {
-            $approval[$gameUser->id] = false;
+        if (!$round->done) {
+            // Set user approval
+            $approval = [];
+            foreach ($round->game->users as $gameUser) {
+                $approval[$gameUser->id] = false;
+            }
+            $round->user_approval = $approval;
+
+            // Set round as done
+            $round->done = true;
+            $round->save();
+            $round->game->state = 'answers';
+            $round->game->save();
+
+            // Broadcast
+            broadcast(new SendAnswers($round));
+            broadcast(new ChangeState($round->game, $user, 'answers', 5, $round));
+            broadcast(new RoundApproval($round));
+
+            return response()->json(['message' => 'OK'], 200);
+        } else {
+            return response()->json(['message' => 'Already stopped.'], 200);
         }
-        $round->user_approval = $approval;
-
-        // Set round as done
-        $round->done = true;
-        $round->save();
-        $round->game->state = 'answers';
-        $round->game->save();
-
-        // Broadcast
-        broadcast(new SendAnswers($round));
-        broadcast(new ChangeState($round->game, $user, 'answers', 5, $round));
-        broadcast(new RoundApproval($round));
-
-        return response()->json(['message' => 'OK'], 200);
     }
 
     /**

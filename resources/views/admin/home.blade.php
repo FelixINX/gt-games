@@ -16,6 +16,20 @@
 
         <h1>Bienvenue {{ auth()->user()->name }}!</h1>
 
-        <a href="{{ route('invitations.index') }}" class="btn btn-secondary">Gérer les invitations</a>
+        <div class="card-deck">
+            <div class="card bg-secondary text-white">
+                <div class="card-body">
+                    <h5 class="card-title">X invitations à approuver</h5>
+                    <a href="{{ route('invitations.index') }}" class="card-link stretched-link">Gérer les invitations</a>
+                </div>
+            </div>
+            <div class="card bg-info text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Y groupes</h5>
+                    <a href="{{ route('groups.index') }}" class="card-link stretched-link">Gérer les groupes</a>
+                </div>
+            </div>
+        </div>
+
     </div>
 @endsection

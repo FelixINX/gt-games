@@ -76,7 +76,7 @@
             })
         })
         .listen('.App\\Events\\Scatt\\AnswersList', e => {
-          this.$store.commit('scattGame/setReceivedAnswers', e)
+          this.$store.commit('scattGame/setUpdatedReceivedAnswers', e)
         })
         .listen('.App\\Events\\Scatt\\RoundApproval',e => {
           this.$store.commit('scattGame/setRoundApproval', e)

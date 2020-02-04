@@ -7,7 +7,8 @@ const router = new VueRouter({
   routes: [
     {
       path: '/',
-      component: () => import(/* webpackChunkName: 'home' */ './components/Home/Home.vue')
+      component: () => import(/* webpackChunkName: 'home' */ './components/Home/Home.vue'),
+      meta: { background: '/img/home.jpg' }
     },
     {
       path: '/leaderboard',
@@ -37,6 +38,10 @@ const router = new VueRouter({
     {
       path: '/redirect/:method',
       component: () => import(/* webpackChunkName: 'redirect' */ './components/Redirect.vue')
+    },
+    {
+      path: '/about/whats-new',
+      component: () => import(/* webpackChunkName: 'about' */ './components/About/WhatsNew.vue')
     }
   ]
 })

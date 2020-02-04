@@ -49,6 +49,7 @@ class AnswerController extends Controller
         }
 
         // Create answer
+        // Todo: if answer is one letter, default user approval should be false
         foreach ($round->game->categories as $category) {
             if (array_key_exists($category->id, $request->input('answers'))) {
                 Answer::create([

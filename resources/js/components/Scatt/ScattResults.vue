@@ -12,7 +12,7 @@
                         <v-list-item-subtitle>
                             {{ player.gameReputation }} points
                         </v-list-item-subtitle>
-                    </v-list-item-content>
+                    </v-list-item-content>m
                     <v-list-item-action v-if="rank[0] === player">
                         <v-icon>
                             mdi-trophy-variant

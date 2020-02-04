@@ -1,1 +1,262 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{102:function(t,n,e){var a=e(103);"string"==typeof a&&(a=[[t.i,a,""]]);var r={hmr:!0,transform:void 0,insertInto:void 0};e(4)(a,r);a.locals&&(t.exports=a.locals)},103:function(t,n,e){(t.exports=e(3)(!1)).push([t.i,"/** Ripples */\n/** Elements */\n.theme--light.v-data-table {\n  background-color: #FFFFFF;\n  color: rgba(0, 0, 0, 0.87);\n}\n.theme--light.v-data-table .v-data-table__divider {\n  border-right: 1px solid rgba(0, 0, 0, 0.12);\n}\n.theme--light.v-data-table.v-data-table--fixed-header thead th {\n  background: #FFFFFF;\n  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.12);\n}\n.theme--light.v-data-table thead tr:last-child th {\n  border-bottom: 1px solid rgba(0, 0, 0, 0.12);\n}\n.theme--light.v-data-table thead tr th {\n  color: rgba(0, 0, 0, 0.6);\n}\n.theme--light.v-data-table tbody tr:not(:last-child) td:not(.v-data-table__mobile-row) {\n  border-bottom: 1px solid rgba(0, 0, 0, 0.12);\n}\n.theme--light.v-data-table tbody tr:not(:last-child) td:last-child {\n  border-bottom: 1px solid rgba(0, 0, 0, 0.12);\n}\n.theme--light.v-data-table tbody tr.active {\n  background: #f5f5f5;\n}\n.theme--light.v-data-table tbody tr:hover:not(.v-data-table__expanded__content) {\n  background: #eeeeee;\n}\n\n.theme--dark.v-data-table {\n  background-color: #424242;\n  color: #FFFFFF;\n}\n.theme--dark.v-data-table .v-data-table__divider {\n  border-right: 1px solid rgba(255, 255, 255, 0.12);\n}\n.theme--dark.v-data-table.v-data-table--fixed-header thead th {\n  background: #424242;\n  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.12);\n}\n.theme--dark.v-data-table thead tr:last-child th {\n  border-bottom: 1px solid rgba(255, 255, 255, 0.12);\n}\n.theme--dark.v-data-table thead tr th {\n  color: rgba(255, 255, 255, 0.7);\n}\n.theme--dark.v-data-table tbody tr:not(:last-child) td:not(.v-data-table__mobile-row) {\n  border-bottom: 1px solid rgba(255, 255, 255, 0.12);\n}\n.theme--dark.v-data-table tbody tr:not(:last-child) td:last-child {\n  border-bottom: 1px solid rgba(255, 255, 255, 0.12);\n}\n.theme--dark.v-data-table tbody tr.active {\n  background: #505050;\n}\n.theme--dark.v-data-table tbody tr:hover:not(.v-data-table__expanded__content) {\n  background: #616161;\n}\n\n.v-data-table table {\n  width: 100%;\n  border-spacing: 0;\n}\n.v-data-table td, .v-data-table th {\n  padding: 0 16px;\n}\n.v-data-table th {\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  font-size: 12px;\n  height: 48px;\n}\n.v-application--is-ltr .v-data-table th {\n  text-align: left;\n}\n.v-application--is-rtl .v-data-table th {\n  text-align: right;\n}\n.v-data-table td {\n  font-size: 14px;\n  height: 48px;\n}\n\n.v-data-table__wrapper {\n  overflow-x: auto;\n  overflow-y: hidden;\n}\n\n.v-data-table__progress {\n  height: auto !important;\n}\n.v-data-table__progress th {\n  height: auto !important;\n  border: none !important;\n  padding: 0;\n}\n\n.v-data-table--dense td {\n  height: 24px;\n}\n.v-data-table--dense th {\n  height: 32px;\n}\n\n.v-data-table--fixed-height .v-data-table__wrapper {\n  overflow-y: auto;\n}\n\n.v-data-table--fixed-header .v-data-table__wrapper {\n  overflow-y: auto;\n}\n.v-data-table--fixed-header thead th {\n  border-bottom: 0px !important;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  z-index: 2;\n}\n.v-data-table--fixed-header thead tr:nth-child(2) th {\n  top: 48px;\n}\n.v-application--is-ltr .v-data-table--fixed-header .v-data-footer {\n  margin-right: 17px;\n}\n.v-application--is-rtl .v-data-table--fixed-header .v-data-footer {\n  margin-left: 17px;\n}\n\n.v-data-table--fixed.v-data-table--dense thead tr:nth-child(2) th {\n  top: 32px;\n}",""])},328:function(t,n,e){"use strict";e.d(n,"a",(function(){return i})),e.d(n,"b",(function(){return o})),e.d(n,"c",(function(){return s})),e.d(n,"d",(function(){return l}));var a=e(60),r=e(0);const i=Object(r.h)("v-card__actions"),o=Object(r.h)("v-card__subtitle"),s=Object(r.h)("v-card__text"),l=Object(r.h)("v-card__title");a.a},33:function(t,n,e){"use strict";var a=e(1),r=e.n(a),i=(e(96),e(21)),o=e(7),s=e(23),l=e(40),d=e(6),h=e(0),c=e(2);var p=Object(c.a)(o.a,Object(s.b)(["absolute","fixed","top","bottom"]),l.a,d.a).extend({name:"v-progress-linear",props:{active:{type:Boolean,default:!0},backgroundColor:{type:String,default:null},backgroundOpacity:{type:[Number,String],default:null},bufferValue:{type:[Number,String],default:100},color:{type:String,default:"primary"},height:{type:[Number,String],default:4},indeterminate:Boolean,query:Boolean,rounded:Boolean,stream:Boolean,striped:Boolean,value:{type:[Number,String],default:0}},data(){return{internalLazyValue:this.value||0}},computed:{__cachedBackground(){return this.$createElement("div",this.setBackgroundColor(this.backgroundColor||this.color,{staticClass:"v-progress-linear__background",style:this.backgroundStyle}))},__cachedBar(){return this.$createElement(this.computedTransition,[this.__cachedBarType])},__cachedBarType(){return this.indeterminate?this.__cachedIndeterminate:this.__cachedDeterminate},__cachedBuffer(){return this.$createElement("div",{staticClass:"v-progress-linear__buffer",style:this.styles})},__cachedDeterminate(){return this.$createElement("div",this.setBackgroundColor(this.color,{staticClass:"v-progress-linear__determinate",style:{width:Object(h.f)(this.normalizedValue,"%")}}))},__cachedIndeterminate(){return this.$createElement("div",{staticClass:"v-progress-linear__indeterminate",class:{"v-progress-linear__indeterminate--active":this.active}},[this.genProgressBar("long"),this.genProgressBar("short")])},__cachedStream(){return this.stream?this.$createElement("div",this.setTextColor(this.color,{staticClass:"v-progress-linear__stream",style:{width:Object(h.f)(100-this.normalizedBuffer,"%")}})):null},backgroundStyle(){return{opacity:null==this.backgroundOpacity?this.backgroundColor?1:.3:parseFloat(this.backgroundOpacity),[this.$vuetify.rtl?"right":"left"]:Object(h.f)(this.normalizedValue,"%"),width:Object(h.f)(this.normalizedBuffer-this.normalizedValue,"%")}},classes(){return{"v-progress-linear--absolute":this.absolute,"v-progress-linear--fixed":this.fixed,"v-progress-linear--query":this.query,"v-progress-linear--reactive":this.reactive,"v-progress-linear--rounded":this.rounded,"v-progress-linear--striped":this.striped,...this.themeClasses}},computedTransition(){return this.indeterminate?i.d:i.e},normalizedBuffer(){return this.normalize(this.bufferValue)},normalizedValue(){return this.normalize(this.internalLazyValue)},reactive(){return Boolean(this.$listeners.change)},styles(){const t={};return this.active||(t.height=0),this.indeterminate||100===parseFloat(this.normalizedBuffer)||(t.width=Object(h.f)(this.normalizedBuffer,"%")),t}},methods:{genContent(){const t=Object(h.o)(this,"default",{value:this.internalLazyValue});return t?this.$createElement("div",{staticClass:"v-progress-linear__content"},t):null},genListeners(){const t=this.$listeners;return this.reactive&&(t.click=this.onClick),t},genProgressBar(t){return this.$createElement("div",this.setBackgroundColor(this.color,{staticClass:"v-progress-linear__indeterminate",class:{[t]:!0}}))},onClick(t){if(!this.reactive)return;const{width:n}=this.$el.getBoundingClientRect();this.internalValue=t.offsetX/n*100},normalize:t=>t<0?0:t>100?100:parseFloat(t)},render(t){return t("div",{staticClass:"v-progress-linear",attrs:{role:"progressbar","aria-valuemin":0,"aria-valuemax":this.normalizedBuffer,"aria-valuenow":this.indeterminate?void 0:this.normalizedValue},class:this.classes,style:{bottom:this.bottom?0:void 0,height:this.active?Object(h.f)(this.height):0,top:this.top?0:void 0},on:this.genListeners()},[this.__cachedStream,this.__cachedBackground,this.__cachedBuffer,this.__cachedBar,this.genContent()])}});n.a=r.a.extend().extend({name:"loadable",props:{loading:{type:[Boolean,String],default:!1},loaderHeight:{type:[Number,String],default:2}},methods:{genProgress(){return!1===this.loading?null:this.$slots.progress||this.$createElement(p,{props:{absolute:!0,color:!0===this.loading||""===this.loading?this.color||"primary":this.loading,height:this.loaderHeight,indeterminate:!0}})}}})},337:function(t,n,e){"use strict";e.r(n);var a=e(60),r=e(328),i=(e(102),e(0)),o=e(6),s=e(2),l=Object(s.a)(o.a).extend({name:"v-simple-table",props:{dense:Boolean,fixedHeader:Boolean,height:[Number,String]},computed:{classes(){return{"v-data-table--dense":this.dense,"v-data-table--fixed-height":!!this.height&&!this.fixedHeader,"v-data-table--fixed-header":this.fixedHeader,...this.themeClasses}}},methods:{genWrapper(){return this.$slots.wrapper||this.$createElement("div",{staticClass:"v-data-table__wrapper",style:{height:Object(i.f)(this.height)}},[this.$createElement("table",this.$slots.default)])}},render(t){return t("div",{staticClass:"v-data-table",class:this.classes},[this.$slots.top,this.genWrapper(),this.$slots.bottom])}}),d=e(70),h={name:"Leaderboard",components:{VCard:a.a,VCardTitle:r.d,VCardText:r.c,VSimpleTable:l,VAvatar:d.a},computed:{},data:function(){return{leaderboard:[]}},mounted:function(){var t=this;this.$axios.get("/leaderboard",{params:{api_token:window.userApiToken}}).then((function(n){t.leaderboard=n.data.data}))}},c=e(8),p=Object(c.a)(h,(function(){var t=this,n=t.$createElement,e=t._self._c||n;return e("v-card",{attrs:{color:"white"}},[e("v-card-title",[t._v("Classement")]),t._v(" "),e("v-card-text",[e("v-simple-table",{scopedSlots:t._u([{key:"default",fn:function(){return[e("thead",[e("tr",[e("th",{staticClass:"text-left"},[t._v("Nom")]),t._v(" "),e("th",{staticClass:"text-left"},[t._v("Pointage")]),t._v(" "),e("th",{staticClass:"text-left"},[t._v("Nombre de partie jouées")]),t._v(" "),e("th",{staticClass:"text-left"},[t._v("Moyenne")])])]),t._v(" "),e("tbody",t._l(t.leaderboard,(function(n){return e("tr",{key:n.id},[e("td",[e("v-avatar",{staticClass:"mr-1",attrs:{size:"24px"}},[e("img",{attrs:{src:n.avatar,alt:n.name}})]),t._v("\n                        "+t._s(n.name)+"\n                    ")],1),t._v(" "),e("td",[t._v(t._s(n.reputation))]),t._v(" "),e("td",[t._v(t._s(n.numberOfGames))]),t._v(" "),e("td",[t._v(t._s(Math.round(n.reputation/n.numberOfGames)))])])})),0)]},proxy:!0}])})],1)],1)}),[],!1,null,"7f2efee3",null);n.default=p.exports},60:function(t,n,e){"use strict";e(76);var a=e(28),r=e(33),i=e(11),o=e(2);n.a=Object(o.a)(r.a,i.a,a.a).extend({name:"v-card",props:{flat:Boolean,hover:Boolean,img:String,link:Boolean,loaderHeight:{type:[Number,String],default:4},outlined:Boolean,raised:Boolean,shaped:Boolean},computed:{classes(){return{"v-card":!0,...i.a.options.computed.classes.call(this),"v-card--flat":this.flat,"v-card--hover":this.hover,"v-card--link":this.isClickable,"v-card--loading":this.loading,"v-card--disabled":this.loading||this.disabled,"v-card--outlined":this.outlined,"v-card--raised":this.raised,"v-card--shaped":this.shaped,...a.a.options.computed.classes.call(this)}},styles(){const t={...a.a.options.computed.styles.call(this)};return this.img&&(t.background=`url("${this.img}") center center / cover no-repeat`),t}},methods:{genProgress(){const t=r.a.options.methods.genProgress.call(this);return t?this.$createElement("div",{staticClass:"v-card__progress"},[t]):null}},render(t){const{tag:n,data:e}=this.generateRouteLink();return e.style=this.styles,this.isClickable&&(e.attrs=e.attrs||{},e.attrs.tabindex=0),t(n,this.setBackgroundColor(this.color,e),[this.genProgress(),this.$slots.default])}})},76:function(t,n,e){var a=e(95);"string"==typeof a&&(a=[[t.i,a,""]]);var r={hmr:!0,transform:void 0,insertInto:void 0};e(4)(a,r);a.locals&&(t.exports=a.locals)},95:function(t,n,e){(t.exports=e(3)(!1)).push([t.i,'/** Ripples */\n/** Elements */\n.theme--light.v-card {\n  background-color: #FFFFFF;\n  color: rgba(0, 0, 0, 0.87);\n}\n.theme--light.v-card > .v-card__text,\n.theme--light.v-card .v-card__subtitle {\n  color: rgba(0, 0, 0, 0.6);\n}\n.theme--light.v-card.v-card--outlined {\n  border: 1px solid rgba(0, 0, 0, 0.12);\n}\n\n.theme--dark.v-card {\n  background-color: #424242;\n  color: #FFFFFF;\n}\n.theme--dark.v-card > .v-card__text,\n.theme--dark.v-card .v-card__subtitle {\n  color: rgba(255, 255, 255, 0.7);\n}\n.theme--dark.v-card.v-card--outlined {\n  border: 1px solid rgba(255, 255, 255, 0.12);\n}\n\n.v-card {\n  display: block;\n  max-width: 100%;\n  outline: none;\n  text-decoration: none;\n  -webkit-transition-property: box-shadow, opacity;\n  transition-property: box-shadow, opacity;\n  overflow-wrap: break-word;\n  position: relative;\n  white-space: normal;\n  -webkit-transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);\n  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);\n  will-change: box-shadow;\n  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);\n}\n.v-card:not(.v-sheet--tile):not(.v-card--shaped) {\n  border-radius: 4px;\n}\n.v-card > *:first-child:not(.v-btn):not(.v-chip),\n.v-card > .v-card__progress + *:not(.v-btn):not(.v-chip) {\n  border-top-left-radius: inherit;\n  border-top-right-radius: inherit;\n}\n.v-card > *:last-child:not(.v-btn):not(.v-chip) {\n  border-bottom-left-radius: inherit;\n  border-bottom-right-radius: inherit;\n}\n\n.v-card__progress {\n  top: 0;\n  left: 0;\n  right: 0;\n  overflow: hidden;\n}\n\n.v-card__subtitle {\n  padding: 16px;\n}\n.v-card__subtitle + .v-card__text {\n  padding-top: 0;\n}\n\n.v-card__subtitle,\n.v-card__text {\n  font-size: 0.875rem;\n  font-weight: 400;\n  line-height: 1.375rem;\n  letter-spacing: 0.0071428571em;\n}\n\n.v-card__text,\n.v-card__title {\n  padding: 16px;\n}\n\n.v-card__title {\n  -webkit-box-align: center;\n          align-items: center;\n  display: -webkit-box;\n  display: flex;\n  flex-wrap: wrap;\n  font-size: 1.25rem;\n  font-weight: 500;\n  letter-spacing: 0.0125em;\n  line-height: 2rem;\n  word-break: break-all;\n}\n.v-card__title + .v-card__subtitle,\n.v-card__title + .v-card__text {\n  padding-top: 0;\n}\n.v-card__title + .v-card__subtitle {\n  margin-top: -16px;\n}\n\n.v-card__text {\n  width: 100%;\n}\n\n.v-card__actions {\n  -webkit-box-align: center;\n          align-items: center;\n  display: -webkit-box;\n  display: flex;\n  padding: 8px;\n}\n.v-card__actions .v-btn.v-btn {\n  padding: 0 8px;\n}\n.v-application--is-ltr .v-card__actions .v-btn.v-btn + .v-btn {\n  margin-left: 8px;\n}\n.v-application--is-ltr .v-card__actions .v-btn.v-btn .v-icon--left {\n  margin-left: 4px;\n}\n.v-application--is-ltr .v-card__actions .v-btn.v-btn .v-icon--right {\n  margin-right: 4px;\n}\n.v-application--is-rtl .v-card__actions .v-btn.v-btn + .v-btn {\n  margin-right: 8px;\n}\n.v-application--is-rtl .v-card__actions .v-btn.v-btn .v-icon--left {\n  margin-right: 4px;\n}\n.v-application--is-rtl .v-card__actions .v-btn.v-btn .v-icon--right {\n  margin-left: 4px;\n}\n\n.v-card--flat {\n  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);\n}\n\n.v-card--hover {\n  cursor: pointer;\n  -webkit-transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n  transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n}\n.v-card--hover:hover {\n  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.v-card--link {\n  cursor: pointer;\n}\n.v-card--link .v-chip {\n  cursor: pointer;\n}\n.v-card--link:focus:before {\n  opacity: 0.08;\n}\n.v-card--link:before {\n  background: currentColor;\n  bottom: 0;\n  content: "";\n  left: 0;\n  opacity: 0;\n  pointer-events: none;\n  position: absolute;\n  right: 0;\n  top: 0;\n  -webkit-transition: 0.2s opacity;\n  transition: 0.2s opacity;\n}\n\n.v-card--disabled {\n  pointer-events: none;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.v-card--disabled > *:not(.v-card__progress) {\n  opacity: 0.6;\n  -webkit-transition: inherit;\n  transition: inherit;\n}\n\n.v-card--loading {\n  overflow: hidden;\n}\n\n.v-card--outlined {\n  box-shadow: none;\n}\n\n.v-card--raised {\n  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.v-card--shaped {\n  border-radius: 24px 4px;\n}',""])},96:function(t,n,e){var a=e(97);"string"==typeof a&&(a=[[t.i,a,""]]);var r={hmr:!0,transform:void 0,insertInto:void 0};e(4)(a,r);a.locals&&(t.exports=a.locals)},97:function(t,n,e){(t.exports=e(3)(!1)).push([t.i,"/** Ripples */\n/** Elements */\n.theme--light.v-progress-linear {\n  color: rgba(0, 0, 0, 0.87);\n}\n\n.theme--dark.v-progress-linear {\n  color: #FFFFFF;\n}\n\n.v-progress-linear {\n  background: transparent;\n  overflow: hidden;\n  position: relative;\n  -webkit-transition: 0.2s;\n  transition: 0.2s;\n  width: 100%;\n}\n\n.v-progress-linear__buffer {\n  height: inherit;\n  left: 0;\n  position: absolute;\n  top: 0;\n  -webkit-transition: inherit;\n  transition: inherit;\n  width: 100%;\n  z-index: 1;\n}\n\n.v-progress-linear__background {\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  top: 0;\n  -webkit-transition: inherit;\n  transition: inherit;\n}\n\n.v-progress-linear__content {\n  -webkit-box-align: center;\n          align-items: center;\n  display: -webkit-box;\n  display: flex;\n  height: 100%;\n  left: 0;\n  -webkit-box-pack: center;\n          justify-content: center;\n  position: absolute;\n  top: 0;\n  width: 100%;\n  z-index: 2;\n}\n\n.v-progress-linear__determinate {\n  height: inherit;\n  -webkit-transition: inherit;\n  transition: inherit;\n}\n\n.v-progress-linear__indeterminate .long, .v-progress-linear__indeterminate .short {\n  background-color: inherit;\n  bottom: 0;\n  height: inherit;\n  left: 0;\n  position: absolute;\n  top: 0;\n  width: auto;\n  will-change: left, right;\n}\n.v-progress-linear__indeterminate--active .long {\n  -webkit-animation: indeterminate;\n          animation: indeterminate;\n  -webkit-animation-duration: 2.2s;\n          animation-duration: 2.2s;\n  -webkit-animation-iteration-count: infinite;\n          animation-iteration-count: infinite;\n}\n.v-progress-linear__indeterminate--active .short {\n  -webkit-animation: indeterminate-short;\n          animation: indeterminate-short;\n  -webkit-animation-duration: 2.2s;\n          animation-duration: 2.2s;\n  -webkit-animation-iteration-count: infinite;\n          animation-iteration-count: infinite;\n}\n\n.v-progress-linear__stream {\n  -webkit-animation: stream 0.25s infinite linear;\n          animation: stream 0.25s infinite linear;\n  border-color: currentColor;\n  border-top: 4px dotted;\n  bottom: 0;\n  opacity: 0.3;\n  pointer-events: none;\n  position: absolute;\n  right: -8px;\n  top: calc(50% - 2px);\n  -webkit-transition: inherit;\n  transition: inherit;\n}\n\n.v-progress-linear__wrapper {\n  overflow: hidden;\n  position: relative;\n  -webkit-transition: inherit;\n  transition: inherit;\n}\n\n.v-progress-linear--absolute,\n.v-progress-linear--fixed {\n  left: 0;\n  z-index: 1;\n}\n\n.v-progress-linear--absolute {\n  position: absolute;\n}\n\n.v-progress-linear--fixed {\n  position: fixed;\n}\n\n.v-progress-linear--reactive .v-progress-linear__content {\n  pointer-events: none;\n}\n\n.v-progress-linear--rounded {\n  border-radius: 4px;\n}\n\n.v-progress-linear--striped .v-progress-linear__determinate {\n  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 25%, transparent 0, transparent 50%, rgba(255, 255, 255, 0.25) 0, rgba(255, 255, 255, 0.25) 75%, transparent 0, transparent);\n  background-size: 40px 40px;\n  background-repeat: repeat-x;\n}\n\n.v-progress-linear--query .v-progress-linear__indeterminate--active .long {\n  -webkit-animation: query;\n          animation: query;\n  -webkit-animation-duration: 2s;\n          animation-duration: 2s;\n  -webkit-animation-iteration-count: infinite;\n          animation-iteration-count: infinite;\n}\n.v-progress-linear--query .v-progress-linear__indeterminate--active .short {\n  -webkit-animation: query-short;\n          animation: query-short;\n  -webkit-animation-duration: 2s;\n          animation-duration: 2s;\n  -webkit-animation-iteration-count: infinite;\n          animation-iteration-count: infinite;\n}\n\n@-webkit-keyframes indeterminate {\n  0% {\n    left: -90%;\n    right: 100%;\n  }\n  60% {\n    left: -90%;\n    right: 100%;\n  }\n  100% {\n    left: 100%;\n    right: -35%;\n  }\n}\n\n@keyframes indeterminate {\n  0% {\n    left: -90%;\n    right: 100%;\n  }\n  60% {\n    left: -90%;\n    right: 100%;\n  }\n  100% {\n    left: 100%;\n    right: -35%;\n  }\n}\n@-webkit-keyframes indeterminate-short {\n  0% {\n    left: -200%;\n    right: 100%;\n  }\n  60% {\n    left: 107%;\n    right: -8%;\n  }\n  100% {\n    left: 107%;\n    right: -8%;\n  }\n}\n@keyframes indeterminate-short {\n  0% {\n    left: -200%;\n    right: 100%;\n  }\n  60% {\n    left: 107%;\n    right: -8%;\n  }\n  100% {\n    left: 107%;\n    right: -8%;\n  }\n}\n@-webkit-keyframes query {\n  0% {\n    right: -90%;\n    left: 100%;\n  }\n  60% {\n    right: -90%;\n    left: 100%;\n  }\n  100% {\n    right: 100%;\n    left: -35%;\n  }\n}\n@keyframes query {\n  0% {\n    right: -90%;\n    left: 100%;\n  }\n  60% {\n    right: -90%;\n    left: 100%;\n  }\n  100% {\n    right: 100%;\n    left: -35%;\n  }\n}\n@-webkit-keyframes query-short {\n  0% {\n    right: -200%;\n    left: 100%;\n  }\n  60% {\n    right: 107%;\n    left: -8%;\n  }\n  100% {\n    right: 107%;\n    left: -8%;\n  }\n}\n@keyframes query-short {\n  0% {\n    right: -200%;\n    left: 100%;\n  }\n  60% {\n    right: 107%;\n    left: -8%;\n  }\n  100% {\n    right: 107%;\n    left: -8%;\n  }\n}\n@-webkit-keyframes stream {\n  to {\n    -webkit-transform: translateX(-8px);\n            transform: translateX(-8px);\n  }\n}\n@keyframes stream {\n  to {\n    -webkit-transform: translateX(-8px);\n            transform: translateX(-8px);\n  }\n}",""])}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["leaderboard"],{
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Leaderboard/Leaderboard.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Leaderboard/Leaderboard.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuetify_lib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuetify/lib */ "./node_modules/vuetify/lib/index.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'Leaderboard',
+  components: {
+    VCard: vuetify_lib__WEBPACK_IMPORTED_MODULE_0__["VCard"],
+    VCardTitle: vuetify_lib__WEBPACK_IMPORTED_MODULE_0__["VCardTitle"],
+    VCardText: vuetify_lib__WEBPACK_IMPORTED_MODULE_0__["VCardText"],
+    VSimpleTable: vuetify_lib__WEBPACK_IMPORTED_MODULE_0__["VSimpleTable"],
+    VAvatar: vuetify_lib__WEBPACK_IMPORTED_MODULE_0__["VAvatar"]
+  },
+  computed: {},
+  data: function data() {
+    return {
+      leaderboard: []
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    this.$axios.get('/leaderboard', {
+      params: {
+        api_token: window.userApiToken
+      }
+    }).then(function (response) {
+      _this.leaderboard = response.data.data;
+    });
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Leaderboard/Leaderboard.vue?vue&type=template&id=731291b0&scoped=true&":
+/*!**************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Leaderboard/Leaderboard.vue?vue&type=template&id=731291b0&scoped=true& ***!
+  \**************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-card",
+    { attrs: { color: "white" } },
+    [
+      _c("v-card-title", [_vm._v("Classement")]),
+      _vm._v(" "),
+      _c(
+        "v-card-text",
+        [
+          _c("v-simple-table", {
+            scopedSlots: _vm._u([
+              {
+                key: "default",
+                fn: function() {
+                  return [
+                    _c("thead", [
+                      _c("tr", [
+                        _c("th", { staticClass: "text-left" }, [_vm._v("Nom")]),
+                        _vm._v(" "),
+                        _c("th", { staticClass: "text-left" }, [
+                          _vm._v("Pointage")
+                        ]),
+                        _vm._v(" "),
+                        _c("th", { staticClass: "text-left" }, [
+                          _vm._v("Nombre de partie jouées")
+                        ]),
+                        _vm._v(" "),
+                        _c("th", { staticClass: "text-left" }, [
+                          _vm._v("Moyenne")
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "tbody",
+                      _vm._l(_vm.leaderboard, function(player) {
+                        return _c("tr", { key: player.id }, [
+                          _c(
+                            "td",
+                            [
+                              _c(
+                                "v-avatar",
+                                {
+                                  staticClass: "mr-1",
+                                  attrs: { size: "24px" }
+                                },
+                                [
+                                  _c("img", {
+                                    attrs: {
+                                      src: player.avatar,
+                                      alt: player.name
+                                    }
+                                  })
+                                ]
+                              ),
+                              _vm._v(
+                                "\n                        " +
+                                  _vm._s(player.name) +
+                                  "\n                    "
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(player.reputation))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(player.numberOfGames))]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              _vm._s(
+                                Math.round(
+                                  player.reputation / player.numberOfGames
+                                )
+                              )
+                            )
+                          ])
+                        ])
+                      }),
+                      0
+                    )
+                  ]
+                },
+                proxy: true
+              }
+            ])
+          })
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Leaderboard/Leaderboard.vue":
+/*!*************************************************************!*\
+  !*** ./resources/js/components/Leaderboard/Leaderboard.vue ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Leaderboard_vue_vue_type_template_id_731291b0_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Leaderboard.vue?vue&type=template&id=731291b0&scoped=true& */ "./resources/js/components/Leaderboard/Leaderboard.vue?vue&type=template&id=731291b0&scoped=true&");
+/* harmony import */ var _Leaderboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Leaderboard.vue?vue&type=script&lang=js& */ "./resources/js/components/Leaderboard/Leaderboard.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Leaderboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Leaderboard_vue_vue_type_template_id_731291b0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Leaderboard_vue_vue_type_template_id_731291b0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "731291b0",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Leaderboard/Leaderboard.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Leaderboard/Leaderboard.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/Leaderboard/Leaderboard.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Leaderboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Leaderboard.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Leaderboard/Leaderboard.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Leaderboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Leaderboard/Leaderboard.vue?vue&type=template&id=731291b0&scoped=true&":
+/*!********************************************************************************************************!*\
+  !*** ./resources/js/components/Leaderboard/Leaderboard.vue?vue&type=template&id=731291b0&scoped=true& ***!
+  \********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Leaderboard_vue_vue_type_template_id_731291b0_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./Leaderboard.vue?vue&type=template&id=731291b0&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Leaderboard/Leaderboard.vue?vue&type=template&id=731291b0&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Leaderboard_vue_vue_type_template_id_731291b0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Leaderboard_vue_vue_type_template_id_731291b0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ })
+
+}]);

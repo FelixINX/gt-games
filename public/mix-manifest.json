@@ -1,5 +1,4 @@
 {
-    "/vendors~scatt~scatt-create.js": "/vendors~scatt~scatt-create.js",
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/home.js": "/home.js",
@@ -10,6 +9,5 @@
     "/scatt-all.js": "/scatt-all.js",
     "/scatt-categories.js": "/scatt-categories.js",
     "/scatt-create.js": "/scatt-create.js",
-    "/vendors~home.js": "/vendors~home.js",
-    "/vendors~scatt-create.js": "/vendors~scatt-create.js"
+    "/about.js": "/about.js"
 }

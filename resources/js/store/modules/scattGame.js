@@ -48,6 +48,14 @@ const mutations = {
     const collection = collect(answers).groupBy('categoryId')
     state.receivedAnswers = collection.all()
   },
+  setUpdatedReceivedAnswers (state, answers) {
+    let currentAnswers = state.receivedAnswers
+    answers.forEach(newAnswer => {
+      let currentAnswer = currentAnswers[newAnswer.categoryId].firstWhere('id', newAnswer.id)
+      currentAnswer.approval = newAnswer.approval
+      currentAnswer.approved = newAnswer.approved
+    })
+  },
   setRoundApproval (state, data) {
     state.roundApproval.splice(data.roundId, 1, data.approval)
   }

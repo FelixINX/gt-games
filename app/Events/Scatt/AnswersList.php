@@ -2,8 +2,7 @@
 
 namespace App\Events\Scatt;
 
-use App\Http\Resources\Scatt\AnswerResource;
-use App\Model\Scatt\Game;
+use App\Http\Resources\Scatt\AnswerResourceLight;
 use App\Model\Scatt\Round;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
@@ -51,6 +50,6 @@ class AnswersList implements ShouldBroadcast
      */
     public function broadcastWith()
     {
-        return AnswerResource::collection($this->round->answers)->resolve();
+        return AnswerResourceLight::collection($this->round->answers)->resolve();
     }
 }
